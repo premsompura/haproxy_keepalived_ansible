@@ -1,0 +1,13 @@
+---
+- name: setup haproxy servers
+  hosts: all
+  sudo: yes
+  roles:
+    - common
+    - keepalived
+
+- name: create virtual ipaddress
+  hosts: haproxy_server1
+  sudo: yes
+  roles:
+    - virtip

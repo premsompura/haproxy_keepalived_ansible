@@ -1,0 +1,14 @@
+---
+- name: Install haproxy on nodes
+  apt: name=haproxy state=present
+  sudo: yes
+
+- name: enable haproxy on boot
+  lineinfile: src=haproxy dest=/etc/default/haproxy
+  sudo: yes
+  notify: start haproxy daemon
+
+- name: copy conf file
+  template: src=haproxy.cfg.j2 dest=/etc/haproxy/haproxy.cfg
+  sudo: yes
+  notify: start haproxy daemon

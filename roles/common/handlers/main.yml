@@ -1,0 +1,4 @@
+---
+- name: start haproxy daemon
+  service: name=haproxy state=started
+  sudo: yes

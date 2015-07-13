@@ -1,0 +1,14 @@
+---
+front_end_server:
+	- x.x.x.x:p
+
+back_end_server:
+	- [ 'x.x.x.x:p', 'n' ]
+	- [ 'x.x.x.x:p', 'n' ]
+
+virt_ip:
+	- x.x.x.x
+
+balance_fashion: roundrobin
+
+uri_name: stats

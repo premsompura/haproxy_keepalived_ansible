@@ -1,0 +1,8 @@
+---
+- name: assemble interface file
+  assemble: src=interfaces dest=/etc/network/interfaces
+  sudo: yes
+
+- name: restart network interface
+  shell: ifdown eth0:0 && ifup eth0:0
+  sudo: yes

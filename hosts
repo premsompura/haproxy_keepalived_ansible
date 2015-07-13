@@ -1,0 +1,5 @@
+[haproxy_server1]
+142.16.4.21 ansible_ssh_user=vagrant
+
+[haproxy_server2]
+142.16.4.22 ansible_ssh_user=vagrant
